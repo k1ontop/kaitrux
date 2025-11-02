@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Bot de Discord</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="nav-logo">TuBot</a> <ul class="nav-menu">
+                    <li class="nav-item"><a href="#home" class="nav-link">Inicio</a></li>
+                    <li class="nav-item"><a href="#features" class="nav-link">Características</a></li>
+                    <li class="nav-item"><a href="#mutual" class="nav-link">Servidores</a></li>
+                    <li class="nav-item"><a href="#commands" class="nav-link">Comandos</a></li>
+                    <li class="nav-item"><a href="https://discord.gg/aKHfjdMT" target="_blank" class="nav-link cta-button">Soporte</a></li> </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="container hero-content">
+                <h1>La solución todo-en-uno para tu servidor</h1>
+                <p>Moderación avanzada, economía, juegos y perfiles de usuario. Todo lo que necesitas para llevar tu comunidad al siguiente nivel.</p>
+                <div class="hero-buttons">
+                    <a href="https://discord.com/api/oauth2/authorize?client_id=1200646197304631326&permissions=8&scope=bot%20applications.commands" class="btn btn-primary" target="_blank">¡Invítame ahora!</a> 
+                    <a href="#commands" class="btn btn-secondary">Ver Comandos</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://via.placeholder.com/400" alt="Avatar del Bot"> </div>
+        </section>
+
+        <section class="features" id="features">
+            <div class="container">
+                <div class="section-title">
+                    <h2>¿Por qué elegir TuBot?</h2>
+                    <p>Una suite de herramientas completa y fácil de usar.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card animate-on-scroll">
+                        <i class="fas fa-shield-halved"></i>
+                        <h3>Moderación Completa</h3>
+                        <p>Sistema de logs, anti-raid, ban, kick, mute, warn y blacklist. Mantén tu servidor seguro sin esfuerzo.</p>
+                    </div>
+                    <div class="feature-card animate-on-scroll">
+                        <i class="fas fa-star"></i>
+                        <h3>Sistema Premium</h3>
+                        <p>Ofrece características exclusivas a tus usuarios con un sistema de llaves premium y comandos especiales.</p>
+                    </div>
+                    <div class="feature-card animate-on-scroll">
+                        <i class="fas fa-coins"></i>
+                        <h3>Economía y Juegos</h3>
+                        <p>Un sistema de economía para trabajar, cometer crímenes y jugar a juegos como trivia, 8ball y snake.</p>
+                    </div>
+                    <div class="feature-card animate-on-scroll">
+                        <i class="fas fa-heart"></i>
+                        <h3>Interacción y Perfiles</h3>
+                        <p>Sistema de matrimonio, perfiles de usuario, niveles y más de 20 comandos de reacción (hug, kiss, bite).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="container stats-grid">
+                <div class="stat-item animate-on-scroll">
+                    <i class="fas fa-server"></i>
+                    <h3 class="stat-count" data-target="150">0</h3> <p>Servidores</p>
+                </div>
+                <div class="stat-item animate-on-scroll">
+                    <i class="fas fa-users"></i>
+                    <h3 class="stat-count" data-target="80000">0</h3> <p>Usuarios</p>
+                </div>
+                <div class="stat-item animate-on-scroll">
+                    <i class="fas fa-terminal"></i>
+                    <h3 class="stat-count" data-target="70">0</h3> <p>Comandos (Prefijo)</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="mutual-servers" id="mutual">
+            <div class="container">
+                <div class="section-title">
+                    <h2>¿En qué servidores estamos juntos?</h2>
+                    <p>Inicia sesión con Discord para ver los servidores que compartes conmigo.</p>
+                </div>
+                <div class="mutual-login">
+                     <a href="/api/login" class="btn btn-discord"><i class="fab fa-discord"></i> Iniciar sesión con Discord</a>
+                     <p class="small-note">(Esta es una demostración. Mostrar servidores mutuos requiere un backend y que inicies sesión.)</p>
+                </div>
+                <div class="server-list-container" id="mutual-server-list">
+                    </div>
+            </div>
+        </section>
+
+        <section class="commands" id="commands">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Explora los Comandos de Prefijo</h2>
+                    <p>Todos los comandos de prefijo (ej: <code>p!comando</code>) están aquí.</p>
+                </div>
+                
+                <div class="command-filters">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="moderaccion">Moderación</button>
+                    <button class="filter-btn" data-filter="info">Info</button>
+                    <button class="filter-btn" data-filter="interaccion">Interacción</button>
+                    <button class="filter-btn" data-filter="reaccion">Reacción</button>
+                    <button class="filter-btn" data-filter="games">Juegos</button>
+                    <button class="filter-btn" data-filter="profile">Perfil</button>
+                    <button class="filter-btn" data-filter="public">Público</button>
+                    <button class="filter-btn" data-filter="premium">Premium</button>
+                </div>
+
+                <div class="command-list" id="command-list-container">
+                    </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 TuBot. Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+<script src="/script.js"></script>
+</body>
+</html>
